@@ -104,26 +104,26 @@ def main():
 
     while True:
         manager_command()
-        choice = input("Enter your choice (1-7): ")
+        command = input("Enter your command (1-6): ")
 
-        if choice == '1':
+        if command == '1':
             title = input("Enter task title: ")
             add_task(title)
-        elif choice == '2':
+        elif command == '2':
             view_tasks()
-        elif choice == '3':
+        elif command == '3':
             task_id = int(input("Enter task ID to delete: "))
             delete_task(task_id)
-        elif choice == '4':
+        elif command == '4':
             task_id = int(input("Enter task ID to mark complete: "))
             task_status(task_id)
-        elif choice == '5':
+        elif command == '5':
             save_tasks()
-        elif choice == '6':
+        elif command == '6':
             print("Command Line Application Exited")
             break
         else:
-            print("Invalid choice, please try again.")
+            print("Invalid command, please try again.")
 
 
 main()
